@@ -1,0 +1,40 @@
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+
+  gap: 50px;
+}
+
+.featuresCardsWrapper {
+  display: flex;
+  flex-direction: row;
+  row-gap: 50px;
+  column-gap: 80px;
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+
+.sectionText {
+  font-size: 28px;
+  line-height: 36px;
+  width: 480px;
+  padding-left: 20px;
+  margin-bottom: 60px;
+
+  position: relative;
+
+  &::before {
+    content: '';
+
+    display: inline-block;
+    position: absolute;
+
+    width: 1px;
+    height: 100%;
+    left: 0px;
+
+    background-color: var(--accent-color);
+  }
+}
