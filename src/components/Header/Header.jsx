@@ -16,7 +16,7 @@ export const Header = () => {
           >
             About
           </Link>
-          <Link className={css.navigationListItem} to="/">
+          <Link className={css.navigationListItem} to="/catalog">
             Catalog
           </Link>
           <Link className={css.navigationListItem} to="/">

@@ -3,6 +3,7 @@ import Logo from '../../img/logo.png';
 
 import { SectionAbout } from './SectionAbout/SectionAbout';
 import SectionCars from './SectionCars/SectionCars';
+import SectionGallery from './SectionGallery/SectionGallery';
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       </div>
       <SectionAbout />
       <SectionCars />
+      <SectionGallery />
     </>
   );
 };

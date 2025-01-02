@@ -11,7 +11,7 @@ export const SectionAbout = () => {
   return (
     <Section>
       <Container>
-        <Title titleText={'about us'} margin={'0px 0px 85px 90px'} />
+        <Title titleText={'about us'} margin={'0px 0px 85px 0px'} />
         <div className={css.contentWrapper}>
           <div>
             <p className={css.sectionText}>

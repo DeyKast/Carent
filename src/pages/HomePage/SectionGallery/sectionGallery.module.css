@@ -1,0 +1,15 @@
+.swiper {
+  border-radius: 5px;
+}
+
+.swiperItem {
+  border-radius: 5px;
+  max-height: 2900px;
+
+  display: flex;
+  align-items: center;
+}
+
+.swiperItemImage {
+  width: 100%;
+}
