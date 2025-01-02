@@ -1,0 +1,26 @@
+.seeMoreButton {
+  background-color: var(--black-transparent-light);
+  padding: 10px 40px;
+  color: var(--text-color);
+  border-radius: 5px;
+  border: none;
+
+  -webkit-box-shadow: 0px 0px 10px 0px var(--text-color);
+  -moz-box-shadow: 0px 0px 10px 0px var(--text-color);
+  box-shadow: 0px 0px 10px 0px var(--text-color);
+
+  margin-right: 10px;
+  cursor: pointer;
+
+  transition: all linear 200ms;
+
+  &:hover,
+  &:focus {
+    background-color: var(--black-transparent-strong);
+
+    color: var(--accent-color);
+    -webkit-box-shadow: 0px 0px 10px 0px var(--accent-color);
+    -moz-box-shadow: 0px 0px 10px 0px var(--accent-color);
+    box-shadow: 0px 0px 10px 0px var(--accent-color);
+  }
+}

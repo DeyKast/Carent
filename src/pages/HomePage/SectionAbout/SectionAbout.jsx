@@ -1,7 +1,7 @@
 import { Section } from 'components/Base/Section/Section';
 import { Container } from 'components/Base/Container/Container';
 import { Title } from 'components/Base/SectionTitle/SectionTitle';
-import { FeaturesCard } from 'components/Base/FeaturesCard/FeaturesCard';
+import { FeaturesCard } from 'components/FeaturesCard/FeaturesCard';
 
 import lamborghiniImage from '../../../img/labmorghini-image.png';
 
