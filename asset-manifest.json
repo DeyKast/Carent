@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Carent/static/css/main.67f741a8.css",
+    "main.js": "/Carent/static/js/main.110da2a8.js",
+    "static/css/410.b9be1d92.chunk.css": "/Carent/static/css/410.b9be1d92.chunk.css",
+    "static/js/410.38443a3e.chunk.js": "/Carent/static/js/410.38443a3e.chunk.js",
+    "static/js/73.1b1ed897.chunk.js": "/Carent/static/js/73.1b1ed897.chunk.js",
+    "static/js/16.bce52cf1.chunk.js": "/Carent/static/js/16.bce52cf1.chunk.js",
+    "static/js/536.d4643dc2.chunk.js": "/Carent/static/js/536.d4643dc2.chunk.js",
+    "static/media/home-page-photo-desktop.png": "/Carent/static/media/home-page-photo-desktop.58b93ead0fd6838023d9.png",
+    "static/media/labmorghini-image.png": "/Carent/static/media/labmorghini-image.845b648c866f717d820e.png",
+    "static/media/sprite.svg": "/Carent/static/media/sprite.2b9a2ecb64735079720d8c8f5f4be26c.svg",
+    "index.html": "/Carent/index.html",
+    "main.67f741a8.css.map": "/Carent/static/css/main.67f741a8.css.map",
+    "main.110da2a8.js.map": "/Carent/static/js/main.110da2a8.js.map",
+    "410.b9be1d92.chunk.css.map": "/Carent/static/css/410.b9be1d92.chunk.css.map",
+    "410.38443a3e.chunk.js.map": "/Carent/static/js/410.38443a3e.chunk.js.map",
+    "73.1b1ed897.chunk.js.map": "/Carent/static/js/73.1b1ed897.chunk.js.map",
+    "16.bce52cf1.chunk.js.map": "/Carent/static/js/16.bce52cf1.chunk.js.map",
+    "536.d4643dc2.chunk.js.map": "/Carent/static/js/536.d4643dc2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67f741a8.css",
+    "static/js/main.110da2a8.js"
+  ]
+}
