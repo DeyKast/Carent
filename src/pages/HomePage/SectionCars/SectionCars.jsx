@@ -44,7 +44,6 @@ export default function SectionCars() {
   };
 
   const handleSeeMoreClick = id => {
-    console.log('Navigating with state:', { categories });
     navigate(`/catalog/${id}`, { state: { categories } });
   };
 

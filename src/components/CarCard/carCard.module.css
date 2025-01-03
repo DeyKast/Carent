@@ -1,3 +1,118 @@
 .carCard {
-  max-width: 326px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+
+  background-color: var(--black-transparent-strong);
+  border: 1px solid black;
+  border-radius: 5px;
+
+  > div {
+    width: auto;
+  }
+}
+
+.cardImg {
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 5px;
+}
+
+.cardInfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardModel {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.cardRentalPrice {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+.fuelWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cardButtonsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+.cardMoreInfoBtn {
+  width: 100%;
+  padding: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background-color: var(--black-transparent-light);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 0px 0px 3px 0px var(--text-color);
+  -moz-box-shadow: 0px 0px 3px 0px var(--text-color);
+  box-shadow: 0px 0px 3px 0px var(--text-color);
+
+  transition: all linear 200ms;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: var(--accent-color);
+
+    -webkit-box-shadow: 0px 0px 3px 0px var(--accent-color);
+    -moz-box-shadow: 0px 0px 3px 0px var(--accent-color);
+    box-shadow: 0px 0px 3px 0px var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .carCard {
+    flex-direction: row;
+    text-align: end;
+    padding-bottom: 0px;
+
+    .cardImg {
+      height: 100%;
+    }
+
+    > div {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .carCard {
+    flex-direction: column;
+    text-align: start;
+    max-width: 326px;
+
+    .cardImg {
+      height: 215px;
+    }
+
+    > div {
+      width: auto;
+    }
+  }
 }
