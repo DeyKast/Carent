@@ -17,8 +17,8 @@ const CarCard = ({ car, categoryId }) => {
 
   const navigate = useNavigate();
 
-  const handleSeeMoreClick = ({ id, categoryId }) => {
-    navigate(`/car/${id}`, { state: { categoryId } });
+  const handleSeeMoreClick = () => {
+    navigate(`/car/${id}`, { state: { car } });
   };
 
   return (

@@ -3,24 +3,22 @@
   top: 0px;
   left: 0px;
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   background-color: var(--black-transparent-strong);
-
   height: 100px;
   font-size: 20px;
+  z-index: 10;
 }
 
 .headerContainer {
   padding-left: 25px;
   padding-right: 25px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 @media screen and (min-width: 480px) {
@@ -37,6 +35,10 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  .hiddenLink {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -45,22 +47,72 @@
     padding-left: 80px;
     padding-right: 80px;
   }
+
+  .hiddenLink {
+    display: block;
+  }
+}
+
+.burgerButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.burgerLine {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .navigationList {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   gap: 45px;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.menuOpen {
+  transform: translateX(0);
+}
+
+.menuClosed {
+  transform: translateX(100%);
+}
+
+@media screen and (max-width: 767px) {
+  .navigationList {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    flex-direction: column;
+    background-color: rgb(7 8 10);
+    width: 60%;
+    height: 100%;
+    padding: 150px 20px;
+    gap: 50px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 15;
+  }
+
+  .menuOpen {
+    transform: translateX(0);
+  }
 }
 
 .navigationListItem {
   font-size: 24px;
   color: var(--text-color);
   text-decoration: none;
-
-  transition: color linear 200ms;
+  transition: color 0.3s ease;
 
   &:hover,
   &:focus {
@@ -69,11 +121,26 @@
 }
 
 .loginWrapper {
-  display: flex;
-  align-items: center;
-  gap: 45px;
+  display: none;
+}
 
-  font-size: 24px;
-  color: var(--text-color);
-  text-decoration: none;
+@media screen and (min-width: 768px) {
+  .loginWrapper {
+    display: flex;
+    gap: 45px;
+  }
+
+  .burgerButton {
+    display: none;
+  }
+
+  .navigationList {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    background: none;
+    gap: 45px;
+  }
 }
