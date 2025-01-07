@@ -62,12 +62,9 @@
   cursor: pointer;
   font-size: 14px;
   transition: background-color linear 200ms;
-}
 
-resetButton:hover {
-  background-color: var(--accent-color);
-}
-
-resetButton:active {
-  background-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
