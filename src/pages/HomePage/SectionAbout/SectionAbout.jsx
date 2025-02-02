@@ -24,7 +24,7 @@ export const SectionAbout = () => {
             <FeaturesCard
               symbol={'+'}
               number={'10'}
-              text={'Years of expierence'}
+              text={'Years of experience'}
             />
             <FeaturesCard
               symbol={'+'}
