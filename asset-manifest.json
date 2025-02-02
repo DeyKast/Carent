@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/Carent/static/css/main.d8f80746.css",
-    "main.js": "/Carent/static/js/main.4c874d57.js",
-    "static/css/927.05ff3f66.chunk.css": "/Carent/static/css/927.05ff3f66.chunk.css",
-    "static/js/927.d043c300.chunk.js": "/Carent/static/js/927.d043c300.chunk.js",
+    "main.css": "/Carent/static/css/main.acd009ab.css",
+    "main.js": "/Carent/static/js/main.30a9a7ee.js",
+    "static/css/927.ed7794a9.chunk.css": "/Carent/static/css/927.ed7794a9.chunk.css",
+    "static/js/927.df9abefc.chunk.js": "/Carent/static/js/927.df9abefc.chunk.js",
     "static/css/808.7b03a372.chunk.css": "/Carent/static/css/808.7b03a372.chunk.css",
     "static/js/808.a39f251b.chunk.js": "/Carent/static/js/808.a39f251b.chunk.js",
     "static/css/489.e0b8615c.chunk.css": "/Carent/static/css/489.e0b8615c.chunk.css",
@@ -15,10 +15,10 @@
     "static/media/labmorghini-image.png": "/Carent/static/media/labmorghini-image.845b648c866f717d820e.png",
     "static/media/sprite.svg": "/Carent/static/media/sprite.2b9a2ecb64735079720d8c8f5f4be26c.svg",
     "index.html": "/Carent/index.html",
-    "main.d8f80746.css.map": "/Carent/static/css/main.d8f80746.css.map",
-    "main.4c874d57.js.map": "/Carent/static/js/main.4c874d57.js.map",
-    "927.05ff3f66.chunk.css.map": "/Carent/static/css/927.05ff3f66.chunk.css.map",
-    "927.d043c300.chunk.js.map": "/Carent/static/js/927.d043c300.chunk.js.map",
+    "main.acd009ab.css.map": "/Carent/static/css/main.acd009ab.css.map",
+    "main.30a9a7ee.js.map": "/Carent/static/js/main.30a9a7ee.js.map",
+    "927.ed7794a9.chunk.css.map": "/Carent/static/css/927.ed7794a9.chunk.css.map",
+    "927.df9abefc.chunk.js.map": "/Carent/static/js/927.df9abefc.chunk.js.map",
     "808.7b03a372.chunk.css.map": "/Carent/static/css/808.7b03a372.chunk.css.map",
     "808.a39f251b.chunk.js.map": "/Carent/static/js/808.a39f251b.chunk.js.map",
     "489.e0b8615c.chunk.css.map": "/Carent/static/css/489.e0b8615c.chunk.css.map",
@@ -28,7 +28,7 @@
     "621.8285613f.chunk.js.map": "/Carent/static/js/621.8285613f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8f80746.css",
-    "static/js/main.4c874d57.js"
+    "static/css/main.acd009ab.css",
+    "static/js/main.30a9a7ee.js"
   ]
 }
