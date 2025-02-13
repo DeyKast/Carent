@@ -2,12 +2,15 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 120px;
 
   align-items: flex-end;
-  justify-content: flex-start;
   text-align: end;
 
-  max-width: 120px;
+  &:nth-child(odd) {
+    align-items: flex-start;
+    text-align: start;
+  }
 }
 
 .bigText {
@@ -25,37 +28,27 @@
   color: var(--accent-color);
 }
 
-@media screen and (min-width: 480px) {
-}
-
 @media screen and (min-width: 768px) {
   .cardWrapper {
-    display: flex;
-    flex-direction: column;
     gap: 15px;
-
-    align-items: flex-end;
-    justify-content: flex-start;
-    text-align: end;
-
     max-width: 185px;
   }
 
   .bigText {
     font-size: 64px;
-    font-weight: 800;
   }
 
   .smallText {
     font-size: 24px;
-    font-weight: 600;
     line-height: 30px;
-  }
-
-  .accentText {
-    color: var(--accent-color);
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .cardWrapper {
+    &:nth-child(odd) {
+      align-items: flex-end;
+      text-align: end;
+    }
+  }
 }

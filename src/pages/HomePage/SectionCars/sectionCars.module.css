@@ -11,36 +11,38 @@
 .car-details {
   text-align: center;
   background-color: var(--background-color);
+  gap: 30px;
 
   color: var(--text-color);
 
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .detailsTextWrapper {
-  width: 430px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 
   gap: 30px;
   overflow: visible;
 }
 
 .car-title {
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: end;
+  text-align: center;
 }
 
 .car-description {
   font-size: 16px;
 
   line-height: 28px;
-  text-align: end;
+  text-align: center;
 
   overflow: visible;
 }
@@ -101,4 +103,29 @@
   -webkit-box-shadow: 0px 0px 10px 0px var(--accent-color);
   -moz-box-shadow: 0px 0px 10px 0px var(--accent-color);
   box-shadow: 0px 0px 10px 0px var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .car-details {
+    flex-direction: row;
+  }
+
+  .car-title {
+    text-align: end;
+  }
+
+  .detailsTextWrapper {
+    width: 430px;
+    align-items: flex-end;
+  }
+
+  .car-description {
+    text-align: end;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .car-title {
+    font-size: 48px;
+  }
 }
