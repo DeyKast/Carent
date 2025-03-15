@@ -38,7 +38,7 @@ export const AuthProvider = () => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [auth]);
 
   const handleLogout = async () => {
     await signOut(auth);
