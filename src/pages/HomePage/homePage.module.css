@@ -5,11 +5,12 @@
 
 .container {
   background-image: url('../../img/home-page-photo-desktop.png');
-
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   height: 710px;
 
   margin-right: auto;
@@ -21,6 +22,22 @@
   justify-content: flex-end;
 
   gap: 35px;
+}
+
+/* Планшети */
+@media (max-width: 1200px) {
+  .container {
+    background-image: url('../../img/home-page-photo-tablet.png');
+    height: 600px;
+  }
+}
+
+/* Мобільні пристрої */
+@media (max-width: 768px) {
+  .container {
+    background-image: url('../../img/home-page-photo-mobile.png');
+    height: 500px;
+  }
 }
 
 .logo {

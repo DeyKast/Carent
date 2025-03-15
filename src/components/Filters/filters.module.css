@@ -10,6 +10,8 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
+  transition: all linear 200ms;
+
   margin-bottom: 30px;
 }
 
@@ -67,4 +69,38 @@
   &:focus {
     background-color: var(--accent-color);
   }
+}
+
+.filtersContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggleButton {
+  width: 100%;
+  height: 40px;
+  background-color: var(--black-transparent-light);
+  border: 1px solid var(--black-transparent-strong);
+  color: var(--text-color);
+
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all linear 200ms;
+}
+
+.toggleButton:hover,
+.toggleButton:focus {
+  color: var(--accent-color);
+}
+
+.show {
+  height: auto;
+  opacity: 1;
+}
+
+.hide {
+  height: 0;
+  opacity: 0;
 }

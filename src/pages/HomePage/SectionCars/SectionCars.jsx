@@ -73,7 +73,6 @@ export default function SectionCars() {
                 modifier: 1.5,
                 slideShadows: true,
               }}
-              style={{ overflow: 'visible' }}
             >
               {categories.map(category => (
                 <SwiperSlide key={category.id}>

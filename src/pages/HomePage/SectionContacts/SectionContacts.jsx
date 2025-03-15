@@ -18,7 +18,7 @@ const SectionContacts = () => {
 
             <ul className={css.listWrapper}>
               <li>
-                <p>Open now: 9AM - 10PM</p>
+                <p style={{ marginTop: '8px' }}>Open now: 9AM - 10PM</p>
               </li>
               <li>
                 <a href="https://www.youtube.com/">YouTube chanel</a>
