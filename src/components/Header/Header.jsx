@@ -97,7 +97,7 @@ export const Header = () => {
           </Link>
         </nav>
 
-        {/* Кнопки логіну */}
+        {/* Кнопки логіну  */}
         <AuthProvider />
       </div>
 
