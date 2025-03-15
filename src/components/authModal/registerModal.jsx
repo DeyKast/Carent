@@ -5,12 +5,14 @@ import {
   updateProfile,
   signInWithPopup,
 } from 'firebase/auth';
+import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import { googleAuthProvider } from '../../firebase';
 
 import css from './registerModal.module.css';
 
 const RegisterModal = ({ isOpen, onClose }) => {
   const auth = getAuth();
+  const db = getFirestore();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -54,6 +56,13 @@ const RegisterModal = ({ isOpen, onClose }) => {
         password
       );
       await updateProfile(userCredential.user, { displayName: name });
+
+      // Додаємо користувача до Firestore з роллю "user"
+      await setDoc(doc(db, 'users', userCredential.user.uid), {
+        email: email,
+        role: email === 'admin@example.com' ? 'admin' : 'user', // Автоматично робимо адміном певний email
+      });
+
       onClose();
     } catch (err) {
       setError('Registration error. This email may already be in use.');

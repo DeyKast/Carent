@@ -1,22 +1,44 @@
 import { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import AuthModal from '../../components/authModal/authModal';
-import css from './authProvider.module.css';
 import RegisterModal from 'components/authModal/registerModal';
+import css from './authProvider.module.css';
+import { Link } from 'react-router-dom';
+
+const db = getFirestore();
 
 export const AuthProvider = () => {
   const auth = getAuth();
   const [user, setUser] = useState(null);
+  const [role, setRole] = useState(null); // Додаємо state для ролі
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, maybeUser => {
+    const unsubscribe = onAuthStateChanged(auth, async maybeUser => {
       setUser(maybeUser);
+
+      if (maybeUser) {
+        try {
+          const userRef = doc(db, 'users', maybeUser.uid);
+          const userSnap = await getDoc(userRef);
+
+          if (userSnap.exists()) {
+            setRole(userSnap.data().role || 'user');
+          } else {
+            setRole('user'); // Якщо документ не існує, припускаємо, що це звичайний юзер
+          }
+        } catch (error) {
+          console.error('Error fetching user role:', error);
+        }
+      } else {
+        setRole(null);
+      }
     });
 
     return () => unsubscribe();
-  }, [auth]);
+  }, []);
 
   const handleLogout = async () => {
     await signOut(auth);
@@ -30,6 +52,24 @@ export const AuthProvider = () => {
           <button onClick={handleLogout} className={css.logoutButton}>
             Logout
           </button>
+
+          {/* Якщо це адмін, показуємо доступ до адмінських сторінок */}
+          {role === 'admin' && (
+            <div className={css.adminPanel}>
+              <Link
+                className={`${css.navigationListItem} ${css.hiddenLink}`}
+                to="/admin/dashboard"
+              >
+                Admin Dashboard
+              </Link>
+              <Link
+                className={`${css.navigationListItem} ${css.hiddenLink}`}
+                to="/admin/users"
+              >
+                Admin Users
+              </Link>
+            </div>
+          )}
         </div>
       ) : (
         <ul className={css.loginWrapper}>
@@ -63,3 +103,5 @@ export const AuthProvider = () => {
     </div>
   );
 };
+
+export default AuthProvider;
