@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import css from './header.module.css';
+import { AuthProvider } from 'service/AuthProvider/authProvider';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -97,26 +98,7 @@ export const Header = () => {
         </nav>
 
         {/* Кнопки логіну */}
-        <ul className={css.loginWrapper}>
-          <li>
-            <Link
-              className={css.navigationListItem}
-              to="/signup"
-              onClick={closeMenu}
-            >
-              Sign Up
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={css.navigationListItem}
-              to="/signin"
-              onClick={closeMenu}
-            >
-              Sign In
-            </Link>
-          </li>
-        </ul>
+        <AuthProvider />
       </div>
 
       {/* Перекриття сторінки при відкритому меню */}
