@@ -9,8 +9,8 @@ const Home = lazy(() => import('../pages/HomePage/HomePage'));
 const Catalog = lazy(() => import('../pages/CatalogPage/CatalogPage'));
 const CarDetails = lazy(() => import('../pages/CarDetailsPage/CarDetailsPage'));
 
-const AdminDashboard = lazy(() => import('../pages/Admin/AdminDashboard'));
-const AdminUsers = lazy(() => import('../pages/Admin/AdminUsers'));
+const AdminDashboard = lazy(() => import('../pages/AdminPages/AdminDashboard/AdminDashboard'));
+const AdminUsers = lazy(() => import('../pages/AdminPages/AdminPositions/AdminPositions'));
 
 const db = getFirestore();
 const auth = getAuth();
