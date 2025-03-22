@@ -1,4 +1,10 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+
 import css from './adminPositions.module.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import { getAllCategories } from 'service/getCategories';
 import CategoriesList from 'components/CategoriesList/CategoriesList';
@@ -12,6 +18,7 @@ const AdminPositions = () => {
   const [selectedCarId, setSelectedCarId] = useState(null);
   const [editableCar, setEditableCar] = useState(null);
   const [newPhotoUrl, setNewPhotoUrl] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -65,6 +72,18 @@ const AdminPositions = () => {
       ...prev,
       [name]: value,
     }));
+  };
+
+  const handleInputPhoto = e => {
+    const url = e.target.value;
+    setNewPhotoUrl(url);
+
+    // Перевірка, чи посилання починається з https://i.ibb.co
+    if (!url.startsWith('https://i.ibb.co')) {
+      setError('Посилання повинно починатися з https://i.ibb.co');
+    } else {
+      setError('');
+    }
   };
 
   const handleSaveChanges = () => {
@@ -159,6 +178,47 @@ const AdminPositions = () => {
           {editableCar && (
             <div className={css.editorForm}>
               <h2 className={css.formTitle}>Edit Car</h2>
+              <div>
+                <div className={css.photosWrapper}>
+                  <div className={css.photoList}>
+                    <Swiper
+                      pagination={{
+                        type: 'fraction',
+                      }}
+                      navigation={true}
+                      modules={[Pagination, Navigation]}
+                      className={css.swiper}
+                    >
+                      {editableCar.photos.map((photo, index) => (
+                        <SwiperSlide key={index}>
+                          <img
+                            src={photo}
+                            alt={`Car ${index}`}
+                            className={css.photoPreview}
+                          />
+                          <button
+                            onClick={() => handleDeletePhoto(index)}
+                            className={css.deletePhotoButton}
+                          >
+                            Delete photo
+                          </button>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </div>
+                  <div className={css.addPhotoWrapper}>
+                    <p>Enter direct link from IMGbb for add new photo</p>
+                    <input
+                      type="text"
+                      value={newPhotoUrl}
+                      className="newPhotoInput"
+                      onChange={handleInputPhoto}
+                    />
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
+                    <button onClick={handleAddPhoto}>Add Photo</button>
+                  </div>
+                </div>
+              </div>
               <div className={css.formGroup}>
                 {Object.keys(editableCar).map(key => {
                   if (
@@ -213,32 +273,6 @@ const AdminPositions = () => {
                   }
                   return null;
                 })}
-              </div>
-              <div>
-                <h3>Photos</h3>
-                <div className={css.photoList}>
-                  {editableCar.photos.map((photo, index) => (
-                    <div key={index} className={css.photoItem}>
-                      <img
-                        src={photo}
-                        alt={`Car ${index}`}
-                        className={css.photoPreview}
-                      />
-                      <button
-                        onClick={() => handleDeletePhoto(index)}
-                        className={css.deletePhotoButton}
-                      >
-                        ✕
-                      </button>
-                    </div>
-                  ))}
-                </div>
-                <input
-                  type="text"
-                  value={newPhotoUrl}
-                  onChange={e => setNewPhotoUrl(e.target.value)}
-                />
-                <button onClick={handleAddPhoto}>Add Photo</button>
               </div>
 
               <div className={css.buttonGroup}>

@@ -140,7 +140,7 @@
 
 .editorForm {
   flex: 2;
-  background: #fff;
+  background: var(--black-transparent-light);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -202,4 +202,54 @@
 
 .deleteButton:hover {
   background-color: #c82333;
+}
+
+.photosWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.addPhotoWrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 40%;
+  gap: 30px;
+}
+
+.newPhotoInput {
+  width: 100%;
+}
+
+.swiper {
+  width: 400px;
+
+  position: relative;
+}
+
+.deletePhotoButton {
+  width: 100%;
+  height: 10%;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  cursor: pointer;
+
+  transition: all linear 200ms;
+
+  border: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: var(--text-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: black;
+  }
 }
