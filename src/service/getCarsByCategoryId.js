@@ -9,7 +9,7 @@ export const getCarsByCategoryId = async categoryId => {
     return response.data;
   } catch (error) {
     console.error(
-      `Error fetching cars with from ${categoryId} category:`,
+      `Error fetching cars from ${categoryId} category:`,
       error
     );
     throw error;

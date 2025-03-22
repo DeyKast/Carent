@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import icons from '../../img/sprite.svg';
 
 import css from './categoriesList.module.css';
@@ -23,17 +22,6 @@ const CategoriesList = ({ categories, activeCategory, onCategoryClick }) => {
       ))}
     </div>
   );
-};
-
-CategoriesList.propTypes = {
-  categories: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  activeCategory: PropTypes.object,
-  onCategoryClick: PropTypes.func.isRequired,
 };
 
 export default CategoriesList;
