@@ -19,6 +19,7 @@ const AdminPositions = () => {
   const [editableCar, setEditableCar] = useState(null);
   const [newPhotoUrl, setNewPhotoUrl] = useState('');
   const [error, setError] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -132,6 +133,7 @@ const AdminPositions = () => {
     );
     setEditableCar(null);
     setSelectedCarId(null);
+    setIsModalOpen(false);
   };
 
   return (
@@ -279,14 +281,57 @@ const AdminPositions = () => {
                 <button onClick={handleSaveChanges} className={css.saveButton}>
                   Save
                 </button>
-                <button onClick={handleDeleteCar} className={css.deleteButton}>
-                  Delete
+                <button
+                  className={css.deleteButton}
+                  onClick={() => setIsModalOpen(true)}
+                >
+                  Delete Car
                 </button>
               </div>
             </div>
           )}
         </div>
       </div>
+      {isModalOpen && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'rgba(0,0,0,0.5)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: '9999999999',
+          }}
+        >
+          <div
+            style={{
+              background: 'white',
+              padding: '20px',
+              borderRadius: '8px',
+              textAlign: 'center',
+            }}
+          >
+            <h3>Confirm Deletion</h3>
+            <p>Are you sure you want to delete this car?</p>
+            <button
+              onClick={() => setIsModalOpen(false)}
+              style={{ marginRight: '10px' }}
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleDeleteCar}
+              style={{ background: 'red', color: 'white' }}
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
