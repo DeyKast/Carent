@@ -18,7 +18,7 @@ const Filters = ({ onFilterChange }) => {
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
-      if (window.innerWidth >= 768) setIsOpen(false);
+      if (window.innerWidth >= 768) setIsOpen(true);
     };
 
     window.addEventListener('resize', handleResize);
