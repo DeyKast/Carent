@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/Carent/static/css/main.476804e1.css",
-    "main.js": "/Carent/static/js/main.b6064ab1.js",
+    "main.js": "/Carent/static/js/main.a461c9d2.js",
     "static/css/826.0be68d27.chunk.css": "/Carent/static/css/826.0be68d27.chunk.css",
     "static/js/826.56d149c3.chunk.js": "/Carent/static/js/826.56d149c3.chunk.js",
     "static/css/929.8c7bcdba.chunk.css": "/Carent/static/css/929.8c7bcdba.chunk.css",
-    "static/js/929.0d43428b.chunk.js": "/Carent/static/js/929.0d43428b.chunk.js",
+    "static/js/929.1e16c1ec.chunk.js": "/Carent/static/js/929.1e16c1ec.chunk.js",
     "static/css/489.e0b8615c.chunk.css": "/Carent/static/css/489.e0b8615c.chunk.css",
     "static/js/489.1051cdd8.chunk.js": "/Carent/static/js/489.1051cdd8.chunk.js",
     "static/css/891.5147a6ad.chunk.css": "/Carent/static/css/891.5147a6ad.chunk.css",
@@ -23,11 +23,11 @@
     "static/media/sprite.svg": "/Carent/static/media/sprite.2b9a2ecb64735079720d8c8f5f4be26c.svg",
     "index.html": "/Carent/index.html",
     "main.476804e1.css.map": "/Carent/static/css/main.476804e1.css.map",
-    "main.b6064ab1.js.map": "/Carent/static/js/main.b6064ab1.js.map",
+    "main.a461c9d2.js.map": "/Carent/static/js/main.a461c9d2.js.map",
     "826.0be68d27.chunk.css.map": "/Carent/static/css/826.0be68d27.chunk.css.map",
     "826.56d149c3.chunk.js.map": "/Carent/static/js/826.56d149c3.chunk.js.map",
     "929.8c7bcdba.chunk.css.map": "/Carent/static/css/929.8c7bcdba.chunk.css.map",
-    "929.0d43428b.chunk.js.map": "/Carent/static/js/929.0d43428b.chunk.js.map",
+    "929.1e16c1ec.chunk.js.map": "/Carent/static/js/929.1e16c1ec.chunk.js.map",
     "489.e0b8615c.chunk.css.map": "/Carent/static/css/489.e0b8615c.chunk.css.map",
     "489.1051cdd8.chunk.js.map": "/Carent/static/js/489.1051cdd8.chunk.js.map",
     "891.5147a6ad.chunk.css.map": "/Carent/static/css/891.5147a6ad.chunk.css.map",
@@ -41,6 +41,6 @@
   },
   "entrypoints": [
     "static/css/main.476804e1.css",
-    "static/js/main.b6064ab1.js"
+    "static/js/main.a461c9d2.js"
   ]
 }
